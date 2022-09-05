@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# :scroll: UserBank-BackEnd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+O objetivo deste desafio / case é Fazer um CRUD no Back-end e consumir no Front-end.
 
-In the project directory, you can run:
 
-### `npm start`
+## :link: Link Surge 
+- Acesse o site clicando no [link](http://workable-sock.surge.sh/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## :link: Link Documentação
+- Acesse a documentação clicando no [link](https://documenter.getpostman.com/view/20351905/VUxPvTDD).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## ⚙️ Funcionalidades
+✅ Todos os campos do formulário são obrigatórios;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ Os dados enviados pelo formulário são salvos no banco de dados;
 
-### `npm run build`
+✅ APIs para enviar e receber os dados;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :hammer_and_wrench: Ferramentas 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🍮 Frontend
+- [React](https://pt-br.reactjs.org/);
+- [JavaScript](https://www.javascript.com/);
+- [Material-UI](https://mui.com/pt/);
+- [React-icons](https://react-icons.github.io/react-icons/);
+- [Axios](https://axios-http.com/ptbr/docs/intro/);
+- [Styled-components](https://styled-components.com/docs/);
 
-### `npm run eject`
+### 🤵 Backend
+- [Node.js](https://nodejs.dev/)
+- [Typescript](https://www.typescriptlang.org/docs/);
+- [Express](http://expressjs.com/);
+- [Knex](http://knexjs.org/guide/);
+- [Dotenv](https://www.npmjs.com/package/dotenv);
+- [MySQL](https://dev.mysql.com/doc/);
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👨‍💻 Desenvolvedor
+[<img src="https://avatars.githubusercontent.com/u/99276733?v=4" width=115><br><sub>Natã Lucas Silva</sub>](https://www.linkedin.com/in/nata-silva/) |
+| :---: |
