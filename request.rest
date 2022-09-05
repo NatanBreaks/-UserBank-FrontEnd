@@ -1,0 +1,39 @@
+GET https://userbank-n.herokuapp.com/dados/55495000
+###
+
+PUT https://userbank-n.herokuapp.com/dados 
+Content-Type: application/json
+
+{
+    "nome": "Luke",
+    "cpf": "111111123111",
+    "data_nascimento": "2000/02/18" ,
+    "saldo": 3000,
+    "limite": 3000,
+    "cep": "55555000",
+    "logradouro": "Rua 1",
+    "bairro": "Centro",
+    "numero": "37",
+    "cidade": "Caruaru",
+    "uf": "PE",
+    "avatar_url": "https://img.quizur.com/f/img6210cb7ccdac11.44972119.jpg?lastEdited=164526785"
+}
+
+
+###
+
+GET https://userbank-case.herokuapp.com/usuarios
+
+###
+
+DELETE https://userbank-n.herokuapp.com/111111123111
+
+###
+
+PUT https://userbank-n.herokuapp.com/img 
+Content-Type: application/json
+
+{
+    "cpf": "11111121111",
+    "avatar_url": "alterada"
+}
