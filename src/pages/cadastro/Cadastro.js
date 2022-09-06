@@ -9,8 +9,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { Label } from "@mui/icons-material";
 import { cpfMask, dinheiroMask, cepMask   } from 'masks-br';
+import { goToLista } from "../../routes/navigate";
+import { useNavigate } from "react-router";
 
 
 
@@ -29,8 +30,9 @@ export default function Cadastro() {
     const [cidade, setCidade] = useState('')
     const [uf, setUf] = useState('')
     const [avatar_url, setAvatar_url] = useState('')
-
     const [open, setOpen] = React.useState(false);
+    const navigate = useNavigate()
+
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -184,6 +186,7 @@ export default function Cadastro() {
         <MainContainer>
             <Header>
                 <h2>EDIÇÃO DE CLIENTE</h2>
+                <Button onClick={()=>{goToLista(navigate)}}>Acessar Lista De Usuarios</Button>
             </Header>
             <EditImage>
                 <div>

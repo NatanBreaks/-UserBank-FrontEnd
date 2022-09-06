@@ -4,10 +4,7 @@ import api from '../../services/api';
 import { Avatar, Button } from "@mui/material";
 import { useNavigate } from "react-router";
 import { MainContainer, Botoes } from "./style";
-
-const goToCadastro = (navigate) => {
-    navigate('/')
-}
+import { goToCadastro } from "../../routes/navigate";
 
 
 const columns = [

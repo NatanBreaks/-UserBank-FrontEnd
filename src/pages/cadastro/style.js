@@ -29,18 +29,24 @@ export const Inputs = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  flex-direction: column;
-  padding-bottom: 3%;
+  justify-content: space-between;
+  color: var(--black);
+  -webkit-box-shadow: 2px 0px 19px 1px rgba(217,217,217,0.74); 
+  box-shadow: 2px 0px 19px 1px rgba(217,217,217,0.74);
+  width: 96vw;
+  margin-bottom: 30px;
   h2{
-    margin-right: 0.1%;
-    padding: 1% 1% 1% 3%;
+    width: 80vw;
+    padding: 0% 1% 1% 2%;
     font-family: Roboto;
     font-size: 1.5rem;
     letter-spacing: -0.39px;
-    color: var(--black);
-    -webkit-box-shadow: 2px 1px 19px 1px rgba(217,217,217,0.74); 
-    box-shadow: 2px 1px 19px 1px rgba(217,217,217,0.74);
   } 
+  Button{
+    width: 15vw;
+    height: 1%;
+    font-size: 0.5rem;
+  }
 `
 export const EditImage = styled.div`
 align-self: center;
