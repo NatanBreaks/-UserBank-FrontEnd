@@ -65,3 +65,4 @@ export const Img2 = styled.img`
 `
 
 
+

@@ -3,7 +3,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePag
 import api from '../../services/api';
 import { Avatar, Button } from "@mui/material";
 import { useNavigate } from "react-router";
-import { MainContainer } from "../cadastro/style";
+import { MainContainer, Botoes } from "./style";
 
 const goToCadastro = (navigate) => {
     navigate('/')
@@ -11,10 +11,10 @@ const goToCadastro = (navigate) => {
 
 
 const columns = [
-    { id: 'avatar_url', label: 'Avatar', minWidth: 10 },
-    { id: 'nome', label: 'Nome', minWidth: 250 },
-    { id: 'cpf', label: 'CPF', minWidth: 50 },
-    { id: 'limite', label: 'Limite', minWidth: 40, align: 'right' },
+    { id: 'avatar_url', label: 'Avatar', minWidth: 15 },
+    { id: 'nome', label: 'Nome', minWidth: 200 },
+    { id: 'cpf', label: 'CPF', minWidth: 100 },
+    { id: 'limite', label: 'Limite', minWidth: 30, align: 'right' },
 ];
 
 function createData(avatar, nome, cpf, limite) {
@@ -110,7 +110,7 @@ export default function StickyHeadTable() {
                                                     </TableCell>
                                                 );
                                             })}
-                                            <div>
+                                            <Botoes>
                                                 <Button
                                                     onClick={() => editar(user)} sx={{ backgroundColor: "#fcdf38", color: "black", pl: "15px", pr: "15px", mt: "2px", mb: "2px" }} > Editar </Button>
                                                 <Button
@@ -118,7 +118,7 @@ export default function StickyHeadTable() {
                                                     sx={{ backgroundColor: "red", color: "black", mb: "2px", mt: "2px" }}
                                                 > Deletar
                                                 </Button>
-                                            </div>
+                                            </Botoes>
                                         </TableRow>
                                     )
                                 })
