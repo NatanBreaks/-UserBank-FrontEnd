@@ -4,7 +4,7 @@ import api from '../../services/api';
 import { Avatar, Button } from "@mui/material";
 import { useNavigate } from "react-router";
 import { MainContainer, Botoes } from "./style";
-import { goToCadastro } from "../../routes/navigate";
+import { goToCadastro, goToUpdate } from "../../routes/navigate";
 
 
 const columns = [
@@ -60,7 +60,7 @@ export default function StickyHeadTable() {
 
     const editar = (user) => {
         window.localStorage.setItem("user", JSON.stringify(user))
-        goToCadastro(navigate)
+        goToUpdate(navigate,"editar")
     }
 
 

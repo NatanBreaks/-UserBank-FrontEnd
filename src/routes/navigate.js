@@ -4,3 +4,6 @@ export const goToCadastro = (navigate) => {
 export const goToLista = (navigate) => {
     navigate('/lista')
 }
+export const goToUpdate = (navigate, update) => {
+    navigate(`/lista/${update}`)
+}

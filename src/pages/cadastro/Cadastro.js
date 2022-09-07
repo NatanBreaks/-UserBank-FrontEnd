@@ -9,15 +9,15 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { cpfMask, dinheiroMask, cepMask   } from 'masks-br';
+import { cpfMask, dinheiroMask, cepMask } from 'masks-br';
 import { goToLista } from "../../routes/navigate";
-import { useNavigate } from "react-router";
-
+import { useNavigate, useParams } from "react-router";
+import  moment  from "moment"
 
 
 
 export default function Cadastro() {
-
+    const params = useParams()
     const [nome, setNome] = useState('')
     const [cpf, setCpf] = useState('')
     const [data_nascimento, setData_nascimento] = useState("")
@@ -35,12 +35,12 @@ export default function Cadastro() {
 
 
     const handleClickOpen = () => {
-      setOpen(true);
+        setOpen(true);
     };
-  
+
     const handleClose = () => {
-      setOpen(false);
-      alterarImg()
+        setOpen(false);
+        alterarImg()
     };
 
 
@@ -85,7 +85,7 @@ export default function Cadastro() {
         const body = {
             nome: nome,
             cpf: cpf,
-            data_nascimento: data_nascimento,
+            data_nascimento: moment(data_nascimento).format("YYYY-MM-DD"),
             saldo: saldo,
             limite: limite,
             cep: cep,
@@ -96,35 +96,36 @@ export default function Cadastro() {
             uf: uf,
             avatar_url: avatar_url
         }
-
-
+        console.log(data_nascimento)
         try {
-            const response = await api.put(`dados`, body)
+            params.update === "editar" ? await api.put(`dados/update`, body) :
+                await api.put(`dados`, body)
             alert('Cadastro criado com sucesso')
 
 
         } catch (error) {
             console.log(error);
-            alert(`Erro ao Atualizar/Criar cadastro do Usuario.`)
+            console.log("oi", params.update)
+            alert(`Erro ao Atualizar/Criar cadastro do Usuario. ${params.update}`)
         }
     }
 
     const alterarImg = async () => {
-            const body = {
-                cpf: cpf,
-                avatar_url: avatar_url
-            }
+        const body = {
+            cpf: cpf,
+            avatar_url: avatar_url
+        }
 
 
-            try {
-                const response = await api.put(`dados/img`, body)
-                alert('Tudo Certo. Avatar já Recebido com Sucesso')
+        try {
+            const response = await api.put(`dados/img`, body)
+            alert('Tudo Certo. Avatar já Recebido com Sucesso')
 
 
-            } catch (error) {
-                console.log(error.response);
-                console.log(`Erro ao alterar imagem. ${error.response.statusText}`)
-            }
+        } catch (error) {
+            console.log(error.response);
+            console.log(`Erro ao alterar imagem. ${error.response.statusText}`)
+        }
     }
     const removerImg = async () => {
         const url = "-";
@@ -186,7 +187,7 @@ export default function Cadastro() {
         <MainContainer>
             <Header>
                 <h2>EDIÇÃO DE CLIENTE</h2>
-                <Button onClick={()=>{goToLista(navigate)}}>Acessar Lista De Usuarios</Button>
+                <Button onClick={() => { goToLista(navigate) }}>Acessar Lista De Usuarios</Button>
             </Header>
             <EditImage>
                 <div>
@@ -199,7 +200,7 @@ export default function Cadastro() {
                 <DialogTitle>Adiciona Imagem</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        Digite o cpf no campo "CPF" e logo apos digite o URL abaixo: 
+                        Digite o cpf no campo "CPF" e logo apos digite o URL abaixo:
                     </DialogContentText>
                     <TextField
                         placeholder="https://www.exemplo.com/imagens/minhafoto/"
@@ -219,7 +220,7 @@ export default function Cadastro() {
             <Inputs>
                 <p>Nome</p>
                 <TextField
-                    sx={{ backgroundColor: "#edeff0", color: "#edeff0", width: "79.4vw", "input": {"&::placeholder": {padding: "4px"}}}}
+                    sx={{ backgroundColor: "#edeff0", color: "#edeff0", width: "79.4vw", "input": { "&::placeholder": { padding: "4px" } } }}
                     placeholder=" Digite aqui..."
                     value={nome}
                     maxLength='32'
@@ -229,7 +230,7 @@ export default function Cadastro() {
                     <div>
                         <p>CPF</p>
                         <TextField
-                            sx={{ backgroundColor: "#edeff0", color: "#edeff0" , width: "39vw" }}
+                            sx={{ backgroundColor: "#edeff0", color: "#edeff0", width: "39vw" }}
                             placeholder="000.000.00-00"
                             type={"text"}
                             value={cpfMask(cpf)}
@@ -240,11 +241,9 @@ export default function Cadastro() {
                         <p>Nascimento</p>
                         <TextField
                             sx={{ backgroundColor: "#edeff0", color: "#edeff0", width: "40vw" }}
-                            
                             type={"date"}
                             placeholder="00/00/0000"
-                            required
-                            value={data_nascimento}
+                            value={moment(data_nascimento).format("YYYY-MM-DD")}
                             onChange={Data_nascimentoValue} />
                     </div>
                 </div>

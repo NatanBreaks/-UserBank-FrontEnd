@@ -9,7 +9,9 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route index element={<Cadastro/>} />
-                <Route path="/lista" element={<Lista/>} /> 
+                <Route path="/lista" element={<Lista/>} />
+                <Route path="/lista/:update" element={<Cadastro/>} />
+
             </Routes>
         </BrowserRouter>
     )

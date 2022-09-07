@@ -1,23 +1,23 @@
 GET https://userbank-n.herokuapp.com/dados/55495000
 ###
 
-PUT https://userbank-n.herokuapp.com/dados 
+PUT https://userbank-n.herokuapp.com/dados/update
 Content-Type: application/json
 
 {
-    "nome": "Luke",
-    "cpf": "111111123111",
-    "data_nascimento": "2000/02/18" ,
-    "saldo": 3000,
-    "limite": 3000,
+    "nome": "Nata Lucas Silva",
+    "cpf": "12313312312",
+    "data_nascimento": "2002/02/10" ,
+    "saldo": 550000,
+    "limite": 50000000,
     "cep": "55555000",
     "logradouro": "Rua 1",
     "bairro": "Centro",
     "numero": "37",
     "cidade": "Caruaru",
-    "uf": "PE",
-    "avatar_url": "https://img.quizur.com/f/img6210cb7ccdac11.44972119.jpg?lastEdited=164526785"
+    "uf": "PE"
 }
+
 
 
 ###
