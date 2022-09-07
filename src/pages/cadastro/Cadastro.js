@@ -334,6 +334,7 @@ export default function Cadastro() {
                             maxLength='2' />
                     </div>
 
+
                 </div>
                 <Button
                     sx={{ backgroundColor: "#36ba59", color: "white", mt: "15px", width: "80vw" }}
